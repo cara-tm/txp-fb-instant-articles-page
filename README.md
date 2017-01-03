@@ -20,3 +20,4 @@ The copyright dates starts from the website first installation year. If you want
 [See the "How To" here.](https://developers.facebook.com/docs/instant-articles/guides/format-overview)
 ##Ressources
 [Instant Articles dedicated Website](https://instantarticles.fb.com/).
+[Cover markup from the official facebook developers docs](https://developers.facebook.com/docs/instant-articles/reference/cover).
