@@ -6,17 +6,17 @@
 		<description><txp:meta_description escape="" format="" /></description>
 		<language><txp:lang /></language>
 		<lastBuildDate><txp:php>
+// Extract the latest website modification date from prefs.
 echo safe_strftime( 'iso8601', get_pref('lastmod') );
 </txp:php></lastBuildDate><txp:article_custom section="articles" limit="10" status="live" month='<txp:php>
+// Restriction for only articles of the year and current month.
 echo date("Y-m", time());
 </txp:php>'>
 		<item>
 			<title><txp:title /></title>
 			<link><txp:permlink /></link>
 			<guid><txp:php>
-/*
- * Get unique article's ID from the 'textpattern' table
- */
+// Get unique article's ID from the 'textpattern' table.
 echo safe_field('uid', 'textpattern', 'ID = "'.article_id(array()).'"');
 </txp:php></guid>
 			<pubDate><txp:posted gmt="1" format="iso8601" /></pubDate>
@@ -25,7 +25,7 @@ echo safe_field('uid', 'textpattern', 'ID = "'.article_id(array()).'"');
 			<content:encoded>
 <![CDATA[
 <!DOCTYPE html>
-<html lang="fr-fr" prefix="op: http://media.facebook.com/op#">
+<html lang="<txp:lang />" prefix="op: http://media.facebook.com/op#">
 <head>
 <meta charset="utf-8">
 <title><txp:site_name /></title>
