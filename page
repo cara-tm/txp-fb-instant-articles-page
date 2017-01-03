@@ -42,7 +42,7 @@ echo safe_field('uid', 'textpattern', 'ID = "'.article_id(array()).'"');
 		</header>
 		<h1><txp:title /></h1>
 		<txp:body />
-		<p><txp:text item="posted" /> <txp:posted lang='<txp:lang />' />. <txp:item item="author" /> <txp:author />.</p>
+		<p><txp:text item="posted" /> <time class="op-published" dateTime="<txp:posted format="%Y-%m-%dT%T" />"><txp:posted lang="fr" /></time><txp:if_modified>, <txp:text item="modified" /> <time class="op-modified" dateTime="<txp:modified format="%Y-%m-%dT%T" />"><txp:modified format="%Y-%m-%dT%T" /></time></txp:if_modified>. <txp:item item="author" /> <txp:author />.</p>
 		<footer>
 			<p>Copyright &copy; <txp:php>$start= date("Y", get_pref('sql_now_created')); echo( ($start < date("Y") ? $start.'-'.date("Y") : $start) );</txp:php> <txp:site_name />, all rights reserved.</p>
 		</footer>
