@@ -36,7 +36,9 @@ echo safe_field('uid', 'textpattern', 'ID = "'.article_id(array()).'"');
 <body>
 	<article>
 		<header>
-      <txp:article_image />
+			<figure data-mode=aspect-fit>
+				<txp:article_image />
+			</figure>
 		</header>
 		<h1><txp:title /></h1>
 		<txp:body />
