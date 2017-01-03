@@ -37,16 +37,19 @@ echo safe_field('uid', 'textpattern', 'ID = "'.article_id(array()).'"');
 <body>
 	<article>
 		<header>
-			<txp:if_article_image><figure data-mode=aspect-fit><txp:images>
+			<txp:if_article_image><figure data-mode=aspect-fit data-feedback="fb:likes, fb:comments"><txp:images>
 			<img src="<txp:image_url />" alt="<txp:image_info type="alt" />">
 			<figcaption class="op-vertical-bottom"><txp:image_info type="caption" /></figcaption></txp:images>
 			</figure></txp:if_article_image>
+			<h1><txp:title /></h1>
+			<address><a><txp:author /></a></address>
+			<time class="op-published" datetime="<txp:posted format="%Y-%m-%dT%T" />"><txp:posted format="%Y-%m-%dT%T" /></time>, <time class="op-modified" datetime="<txp:modified format="%Y-%m-%dT%T" />"><txp:modified format="%Y-%m-%dT%T" /></time>
 		</header>
-		<h1><txp:title /></h1>
+		<h2 data-feedback="fb:likes"><txp:title /></h2>
 		<txp:body />
 		<p><txp:text item="posted" /> <time class="op-published" dateTime="<txp:posted format="%Y-%m-%dT%T" />"><txp:posted lang="fr" /></time><txp:if_modified>, <txp:text item="modified" /> <time class="op-modified" dateTime="<txp:modified format="%Y-%m-%dT%T" />"><txp:modified format="%Y-%m-%dT%T" /></time></txp:if_modified>. <txp:item item="author" /> <txp:author />.</p>
 		<footer>
-			<p>Copyright &copy; <txp:php>$start= date("Y", get_pref('sql_now_created')); echo( ($start < date("Y") ? $start.'-'.date("Y") : $start) );</txp:php> <txp:site_name />, all rights reserved.</p>
+			<small>Copyright &copy; <txp:php>$start= date("Y", get_pref('sql_now_created')); echo( ($start < date("Y") ? $start.'-'.date("Y") : $start) );</txp:php> <txp:site_name />, all rights reserved.</small>
 		</footer>
 	</article>
 </body>
