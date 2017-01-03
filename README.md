@@ -7,7 +7,7 @@ More infos: [here](https://developers.facebook.com/docs/instant-articles/)
 ##Page layout
 No plugins, you only need Textpattern CMS ;)
 
-Just copy/paste [this page layout](https://github.com/cara-tm/txp-fb-instant-articles-page/blob/master/page) into Textpattern and associate it to a section name.
+Just copy/paste [this page layout](https://github.com/cara-tm/txp-fb-instant-articles-page/blob/master/page) into Textpattern and associate it to a section name (that will be your "facebook Instant articles" RSS link URL).
 ##Article's customization into facebook from the Instant Articles editor
 (coming soon)
 ##Ressources
