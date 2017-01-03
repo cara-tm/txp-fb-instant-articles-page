@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+	<channel>
+		<title><txp:site_name /></title>
+		<link><txp:site_url /></link>
+		<description><txp:meta_description escape="" format="" /></description>
+		<language><txp:lang /></language>
+		<lastBuildDate><txp:php>
+echo safe_strftime( 'iso8601', get_pref('lastmod') );
+</txp:php></lastBuildDate><txp:article_custom section="articles" limit="10" status="live" month='<txp:php>
+echo date("Y-m", time());
+</txp:php>'>
+		<item>
+			<title><txp:title /></title>
+			<link><txp:permlink /></link>
+			<guid><txp:php>
+/*
+ * Get unique article's ID from the 'textpattern' table
+ */
+echo safe_field('uid', 'textpattern', 'ID = "'.article_id(array()).'"');
+</txp:php></guid>
+			<pubDate><txp:posted gmt="1" format="iso8601" /></pubDate>
+			<author><txp:author /></author>
+			<description><![CDATA[<txp:excerpt />]]></description>
+			<content:encoded>
+<![CDATA[
+<!DOCTYPE html>
+<html lang="fr-fr" prefix="op: http://media.facebook.com/op#">
+<head>
+<meta charset="utf-8">
+<title><txp:site_name /></title>
+<link rel="canonical" href="<txp:permlink />">
+<meta property="op:markup_version" content="v1.0">
+<meta property="fb:article_style" content="default">
+</head>
+<body>
+	<article>
+		<header>
+      <txp:article_image />
+		</header>
+		<h1><txp:title /></h1>
+		<txp:body />
+		<p><txp:text item="posted" /> <txp:posted lang='<txp:lang />' />. <txp:item item="author" /> <txp:author />.</p>
+		<footer>
+			<p>Copyright &copy; <txp:php>$start= '2006'; echo( ($start < date("Y") ? $start.'-'.date("Y") : $start) );</txp:php> <txp:site_name />, all rights reserved.</p>
+		</footer>
+	</article>
+</body>
+</html>
+]]>
+			</content:encoded>
+		</item></txp:article_custom>
+	</channel>
+</rss>
