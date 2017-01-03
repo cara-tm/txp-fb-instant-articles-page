@@ -18,6 +18,8 @@ The copyright dates starts from the website first installation year. If you want
 
 ##Article's customization into facebook from the Instant Articles editor
 [See the "How To" here.](https://developers.facebook.com/docs/instant-articles/guides/format-overview)
+##Feed Preview
+The feed preview into the facebook social network relies on the Open Graph meta tags. See [this other plugin compagnon for complete integration within your website](https://github.com/cara-tm/pat_article_social). 
 ##Ressources
 [Instant Articles dedicated Website](https://instantarticles.fb.com/).
 
