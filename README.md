@@ -1,7 +1,7 @@
 # txp-fb-instant-articles-page
 A simple one page RSS layout for Facebook's Instant Articles integration into Textpattern CMS
 ##Prerequisites
-You will need a facebook activated "Page" account, then to set your custom Textpattern RSS link into the "Publication Tools" in your facebook Page, at least 10 published articles then wait for crawler bots.
+You will need a facebook activated "Page" account, then to set your custom Textpattern RSS link into the "Publication Tools" from your facebook Page, at least 10 published articles within your website, then wait for crawler bots.
 
 More infos: [here](https://developers.facebook.com/docs/instant-articles/)
 ##Page layout
