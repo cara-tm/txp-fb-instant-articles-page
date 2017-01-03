@@ -7,7 +7,8 @@
 		<language><txp:lang /></language>
 		<lastBuildDate><txp:php>
 // Extract the latest website modification date from prefs.
-echo safe_strftime( 'iso8601', get_pref('lastmod') );
+echo safe_strftime( 'iso8601', strtotime(get_pref('lastmod')) );
+</txp:php></lastBuildDate>
 </txp:php></lastBuildDate><txp:article_custom section="articles" limit="10" status="live" month='<txp:php>
 // Restriction for only articles of the year and current month.
 echo date("Y-m", time());
