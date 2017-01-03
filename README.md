@@ -8,6 +8,12 @@ More infos: [here from the official fb developers docs.](https://developers.face
 No plugins, you only need Textpattern CMS ;)
 
 Just copy/paste [this page layout](https://github.com/cara-tm/txp-fb-instant-articles-page/blob/master/page) into Textpattern and associate it to a section name (that will be your "facebook Instant articles" RSS link URL).
+##Customization
+###Choosing the articles section
+By defaut articles will be extracted from the "articles" section. If you want to change, sets the "section" attribute into this line (comma separated sections list allowed): `<txp:article_custom section="articles"`.
+###Copyright Date
+The copyright dates starts from the website first installation year. If you want to change this year, remove this code `$start= date("Y", get_pref('sql_now_created'));` by this one: `$start = 'YYYY';` where "YYYY" is an integer (the year).
+
 ##Article's customization into facebook from the Instant Articles editor
 [See the "How To" here.](https://developers.facebook.com/docs/instant-articles/guides/format-overview)
 ##Ressources
