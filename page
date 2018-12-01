@@ -7,9 +7,9 @@
 		<language><txp:lang /></language>
 		<lastBuildDate><txp:php>
 // Extract the latest website modification date from prefs.
-echo safe_strftime( 'iso8601', strtotime(get_pref('lastmod')) );
+echo safe_strftime('iso8601', strtotime(get_pref('lastmod')));
 </txp:php></lastBuildDate>
-<txp:article_custom section="articles" limit="10" status="live" month='<txp:php>
+<txp:article_custom section="articles,blog" limit="10" month='<txp:php>
 // Restriction for only articles of the year and current month.
 echo date("Y-m", time());
 </txp:php>'>
@@ -47,7 +47,7 @@ echo safe_field('uid', 'textpattern', 'ID = "'.article_id(array()).'"');
 		</header>
 		<h2 data-feedback="fb:likes"><txp:title /></h2>
 		<txp:body />
-		<p><txp:text item="posted" /> <time class="op-published" dateTime="<txp:posted format="%Y-%m-%dT%T" />"><txp:posted lang="fr" /></time><txp:if_modified>, <txp:text item="modified" /> <time class="op-modified" dateTime="<txp:modified format="%Y-%m-%dT%T" />"><txp:modified format="%Y-%m-%dT%T" /></time></txp:if_modified>. <txp:item item="author" /> <address><a><txp:author /></a></address>.</p>
+		<p><txp:text item="posted" /> <time class="op-published" dateTime="<txp:posted format="%Y-%m-%dT%T" />"><txp:posted lang="fr" /></time>, <txp:text item="modified" /> <time class="op-modified" dateTime="<txp:modified format="%Y-%m-%dT%T" />"><txp:modified format="%Y-%m-%dT%T" /></time> <address><a><txp:author /></a></address>.</p>
 		<footer>
 			<small>Copyright &copy; <txp:php>$start= date("Y", get_pref('sql_now_created')); echo( ($start < date("Y") ? $start.'-'.date("Y") : $start) );</txp:php> <txp:site_name />, all rights reserved.</small>
 		</footer>
