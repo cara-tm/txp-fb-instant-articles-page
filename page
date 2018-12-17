@@ -9,10 +9,7 @@
 // Extract the latest website modification date from prefs.
 echo safe_strftime('iso8601', strtotime(get_pref('lastmod')));
 </txp:php></lastBuildDate>
-<txp:article_custom section="articles,blog" limit="10" month='<txp:php>
-// Restriction for only articles of the year and current month.
-echo date("Y-m", time());
-</txp:php>'>
+<txp:article_custom section="articles,blog" limit="10" month="today" time="%Y-%m">
 		<item>
 			<title><txp:title /></title>
 			<link><txp:permlink /></link>
